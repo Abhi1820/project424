@@ -1,0 +1,51 @@
+<head>
+  <title>pro</title>
+</head>
+
+<body>
+	{{>department}}	
+</body>
+ 
+
+<template name="department">
+		<div class="container">
+		   <div class="row">
+			<h1>HaZzir</h1>
+		   </div>
+		   <div class="row">
+		       <div class="col-sm-offset-4  col-sm-4 color">
+		          <form>
+			     <div class="dafault">
+			         <label>Department's Name</label>
+			         <input type="text" name="deptt" class="form-control amp" placeholder="Department's Name">
+			     </div>
+
+			     <div class="dafault">
+			           <label> Department's Description:</label>
+                                   <textarea name="desc" class="form-control amp" placeholder="Description"></textarea>
+	        	     </div>
+
+	 		     <div class="dafault">
+			           <label>Head Of Department</label>
+			           <input type="text" name="hod" class="form-control amp" placeholder="HOD">
+			     </div>
+
+			    <input type="submit" value="Add Department" class="btn btn-raised btn-primary" > 
+		
+	                 </form>
+	             </div>
+	         </div>
+	{{>display}}
+	</div>
+</template>
+
+
+<template name="display">
+	<div>
+	  <h3>List Of Departments</h3>
+	  {{#each department}}
+            <li>{{name}}</li>
+          {{/each}}
+	</div>
+</template>
+
